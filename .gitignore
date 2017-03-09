@@ -1,0 +1,9 @@
+node_modules/
+dist/
+config/default.json
+
+# PhpStorm
+.idea
+
+# bash script to be used locally only 
+config/heroku.sh
