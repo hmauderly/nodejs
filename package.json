@@ -1,0 +1,38 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apiai": "^4.0.1",
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-env": "^1.2.1",
+    "body-parser": "^1.17.1",
+    "config": "^1.25.1",
+    "express": "^4.15.2",
+    "i18n": "^0.8.3",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.8.6",
+    "request": "^2.80.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmauderly/nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hmauderly/nodejs/issues"
+  },
+  "homepage": "https://github.com/hmauderly/nodejs#readme",
+  "description": ""
+}

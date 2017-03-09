@@ -1,0 +1,19 @@
+{
+  "locale": "fr",
+  "facebook": {
+    "active": true,
+    "appSecret": "APP_SECRET",
+    "pageAccessToken": "PAGE_ACCESS_TOKEN",
+    "validationToken": "CUSTOM_VALIDATION_TOKEN",
+    "salt": "SALT",
+    "serverURL": "https://2fb5ea5e.ngrok.io",
+    "graphUrl": "https://graph.facebook.com/v2.6/"
+  },
+  "datasource": {
+    "allocine": {
+      "active": true,
+      "partnerKey": "AC_PARTNER_KEY",
+      "url": "AC_URL"
+    }
+  }
+}
