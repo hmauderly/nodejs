@@ -1,5 +1,6 @@
 'use strict';
 
+
 const bodyParser = require('body-parser');
 const config = require('config');
 const express = require('express');
@@ -18,7 +19,7 @@ const VALIDATION_TOKEN = "1234";
 
 app.get('/webhook', function(req, res) {
     if (req.query['hub.mode'] === 'subscribe' &&
-        req.query['hub.verify_token'] === VALIDATION_TOKEN) {
+        req.query['hub.verify_token'] === config.get('test.clientAccessToken')) {
         console.log("Validating webhook");
         res.status(200).send(req.query['hub.challenge']);
     } else {

@@ -16,6 +16,9 @@
       "developerAccessToken": "DEVELOPER_ACCESS_TOKEN"
     }
   },
+  "test": {
+      "clientAccessToken": "1234"
+  },
   "datasource": {
     "allocine": {
       "active": true,
