@@ -13,7 +13,7 @@ describe("SAMPLE unit test",function(){
   it("should return home page",function(done){
     // calling home page
     server
-    .get("/webhook?hub.mode=subscribe&hub.verify_token=1234&hub.challenge=foo")
+    .get("/test/webhook?hub.mode=subscribe&hub.verify_token=1234&hub.challenge=foo")
 //    .expect("Content-type",/text/)
     .expect(200) // THis is HTTP response
     .end(function(err,res){

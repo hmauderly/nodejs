@@ -16,11 +16,11 @@ app.set('port', process.env.PORT || 5555);
 app.use(bodyParser.json());
 
 
-router.get('/webhook', function(req, res) {
+router.get('/test/webhook', function(req, res) {
     if (req.query['hub.mode'] === 'subscribe' &&
         req.query['hub.verify_token'] === config.get('test.clientAccessToken')) {
         console.log("Validating webhook");
-        res.status(200).send(req.query['hub.challenge']);
+        res.status(200).send(req.query['hub.challenge'] + '/' + config.get('test.serverResponse'));
     } else {
         console.error("Failed validation. Make sure the validation tokens match.");
         res.sendStatus(403);

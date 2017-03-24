@@ -1,1 +1,7 @@
-{}
+{
+  "locale": "fr",
+  "test": {
+    "clientAccessToken": "1234",
+    "serverResponse": "development.json"
+  }
+}
