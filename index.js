@@ -31,7 +31,7 @@ router.get('/test/webhook', function(req, res) {
     if (req.query['hub.mode'] === 'subscribe' &&
         req.query['hub.verify_token'] === config.get('test.clientAccessToken')) {
         console.log("Validating webhook");
-        redisClient.set("test","ok");
+        redisClient.set("test","GOOD");
         res.status(200).send(req.query['hub.challenge'] + '/' + config.get('test.serverResponse'));
 
     } else {
