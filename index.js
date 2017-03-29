@@ -27,12 +27,11 @@ redisClient.on('error',function() {
 redisClient.set("test","blabla");
 
 
-router.get('/test/webhook', function(req, res) {
+router.get('/pokemongo/webhook', function(req, res) {
     if (req.query['hub.mode'] === 'subscribe' &&
-        req.query['hub.verify_token'] === config.get('test.clientAccessToken')) {
+        req.query['hub.verify_token'] === config.get('pokemongo.clientAccessToken')) {
         console.log("Validating webhook");
-        redisClient.set("test","GOOD");
-        res.status(200).send(req.query['hub.challenge'] + '/' + config.get('test.serverResponse'));
+        res.status(200).send(req.query['hub.challenge']);
 
     } else {
         console.error("Failed validation. Make sure the validation tokens match.");
@@ -45,10 +44,6 @@ router.get('/ac-fr/webhook', function(req, res) {
 
 });
 
-router.get('/pokemongo/webhook', function(req, res) {
-    res.status(200).send('POKEMON BOT');
-
-});
 
 
 app.use('/',router);
