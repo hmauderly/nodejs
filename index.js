@@ -45,6 +45,12 @@ router.get('/ac-fr/webhook', function(req, res) {
 
 });
 
+router.get('/pokemongo/webhook', function(req, res) {
+    res.status(200).send('POKEMON BOT');
+
+});
+
+
 app.use('/',router);
 
 app.listen(app.get('port'), function() {
