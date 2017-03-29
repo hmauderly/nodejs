@@ -40,6 +40,11 @@ router.get('/test/webhook', function(req, res) {
     }
 });
 
+router.get('/ac-fr/webhook', function(req, res) {
+        res.status(200).send('AC_FR BOT');
+
+});
+
 app.use('/',router);
 
 app.listen(app.get('port'), function() {
